@@ -230,7 +230,7 @@ class TSequence(TemporalInstants):
         return False
 
     def __str__(self):
-        interp_str = 'Interp=Stepwise;' if self._interp == 'Stepwise' and self.__class__.BaseClassDiscrete == False else ''
+        interp_str = 'Interp=Step;' if self._interp == 'Stepwise' and self.__class__.BaseClassDiscrete == False else ''
         lower_str = '[' if self._lower_inc else '('
         upper_str = ']' if self._upper_inc else ')'
         return (f"'{interp_str}{lower_str}{TemporalInstants.__str__(self)}{upper_str}'")
